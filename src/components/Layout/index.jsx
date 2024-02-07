@@ -22,7 +22,7 @@ const App = () => {
         <Layout style={{height:"100vh"}}>
             <Sider trigger={null} collapsible collapsed={collapsed}>
                 <div className="demo-logo-vertical text-center text-white" >
-                    <h2 >Logo</h2>
+                    <h2  className='text-danger'>Logo</h2>
                 </div>
                 <Menu
                     theme="dark"
