@@ -22,7 +22,7 @@ const App = () => {
         <Layout style={{height:"100vh"}}>
             <Sider trigger={null} style={{backgroundColor:"red"}} collapsible collapsed={collapsed}>
                 <div className="demo-logo-vertical text-center text-white" >
-                    <h2 className='text-success'>Logo</h2>
+                    <h2 className='text-success'>I am Sardor</h2>
                 </div>
                 <Menu
                     theme="dark"
