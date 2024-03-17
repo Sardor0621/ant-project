@@ -52,9 +52,9 @@ function Index(props) {
                     }}
                     value={selectionType}
                 >
-                    <Radio value="checkbox">Checkbox</Radio>
-                    <Radio value="radio">radio</Radio>
-                    <Button onClick={()=>setOpen(prevState => !prevState)} type={"primary"} className={"float-end"}> Add User </Button>
+                    {/* <Radio value="checkbox">Checkbox</Radio>
+                    <Radio value="radio">radio</Radio> */}
+                    <Button onClick={()=>setOpen(prevState => !prevState)} type={"primary"} className={"float-end"}> Add</Button>
                 </Radio.Group>
 
                 <Divider/>

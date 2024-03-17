@@ -1,0 +1,28 @@
+.sls{
+    line-height: 20px;
+}
+.bgs{
+    background-color: rgba(211, 211, 211, 0.138);
+}
+.str{
+    font-size: 18px;
+    font-weight: 600;
+    
+}
+.btns{
+    position: absolute;
+    right: -30px;
+    
+}
+
+body {
+	color: black; 
+	background-color: white;
+}
+lay.dark {
+	color: white; 
+	background-color: black;
+}
+
+
+

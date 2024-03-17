@@ -7,10 +7,15 @@ const App = ({open, setOpen}) => {
         setOpen(false);
     };
 
+   
     const onFinish = (data) => {
-        console.log(data)
-    }
-
+        // Save form data to local storage
+        localStorage.setItem('formData', JSON.stringify(data));
+    
+        // Log the form data to the console
+        console.log(data);
+    };
+    
 
     return (
         <>

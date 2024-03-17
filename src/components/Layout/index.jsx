@@ -1,31 +1,53 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import { MenuFoldOutlined,
     MenuUnfoldOutlined,
     UploadOutlined,
     UserOutlined,
     VideoCameraOutlined,
 } from '@ant-design/icons';
-import { Layout, Menu, Button, theme } from 'antd';
+import { Layout, Menu, Button,Switch,    theme} from 'antd';
+
 import {Outlet, useNavigate} from "react-router-dom";
+import "./index.css"
+
 
 const { Header, Sider, Content } = Layout;
 
-const App = () => {
+const Layouts = () => {
+  
+    
+
+
+
+
+
     const [collapsed, setCollapsed] = useState(false);
 
     const navigate = useNavigate()
+    const [current, setCurrent] = useState('1');
 
-    const {
-        token: { colorBgContainer, borderRadiusLG },
-    } = theme.useToken();
+
+
+
+ 
+  
+    
+
+    // const {
+    //     token: { colorBgContainer, borderRadiusLG },  
+    // } = theme.useToken();
     return (
-        <Layout style={{height:"100vh"}}>
-            <Sider trigger={null} style={{backgroundColor:"red"}} collapsible collapsed={collapsed}>
+        <Layout className='lay'  
+    
+        style={{height:"100vh"}}
+        >
+            <Sider trigger={null} style={{backgroundColor:"white"}} collapsible collapsed={collapsed}>
                 <div className="demo-logo-vertical text-center text-white" >
-                    <h2 className='text-success'>I am Sardor</h2>
+                    // <img src="" alt="" />
                 </div>
-                <Menu
-                    theme="dark"
+                <Menu className='sls str'
+                    theme="light"
                     mode="inline"
                     defaultSelectedKeys={['1']}
                     onClick={(e)=>navigate(e.key)}
@@ -33,29 +55,36 @@ const App = () => {
                         {
                             key: '/xodimlar',
                             icon: <UserOutlined />,
-                            label: 'Xodimlar',
+                            label: 'Kurslar',
                         },
                         {
                             key: '/lavozimlar',
                             icon: <VideoCameraOutlined />,
-                            label: 'Lavozimlar',
+                            label: "E'lonlar",
                         },
                         {
                             key: '/ilmiy_daraja',
                             icon: <UploadOutlined />,
-                            label: 'Ilmiy-daraja',
+                            label: 'Vebinar',
+                        },
+                        {
+                            key: '/ilmi',
+                            icon: <UploadOutlined />,
+                            label: 'Jamoalar',
+                        },
+                        {
+                            key: '/ilm',
+                            icon: <UploadOutlined />,
+                            label: 'Category',
+                        },
+                        {
+                            key: '/il',
+                            icon: <UploadOutlined />,
+                            label: 'Kontaktlar',
                         },
                     ]}
                 />
-            </Sider>
-            <Layout >
-                <Header
-                    style={{
-                        padding: 0,
-                        background: colorBgContainer,
-                    }}
-                >
-                    <Button
+                    <Button className='btns'
                         type="text"
                         icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
                         onClick={() => setCollapsed(!collapsed)}
@@ -65,20 +94,37 @@ const App = () => {
                             height: 64,
                         }}
                     />
-                </Header>
-                <Content
+            
+            
+
+
+
+    
+                  
+          
+          
+                     
+        
+               
+            </Sider>
+            
+            <Layout >
+              
+                <Content className='bgs'
                     style={{
-                        margin: '24px 16px',
-                        padding: 24,
+                        
+                        padding: 50,
                         minHeight: 280,
-                        background: colorBgContainer,
-                        borderRadius: borderRadiusLG,
+                        
+                            // borderRadius: borderRadiusLG,
                     }}
                 >
                   <Outlet/>
                 </Content>
             </Layout>
         </Layout>
+
+        
     );
 };
-export default App;
+export default Layouts;
