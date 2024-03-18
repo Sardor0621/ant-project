@@ -23,6 +23,68 @@ lay.dark {
 	color: white; 
 	background-color: black;
 }
+.log{
+    width: 25px;
+    height: 20px;
+}
+
+
+.but{
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: none;
+    flex-wrap: wrap;
+}
+.sp{
+    font-size: 10px;
+}
+
+.ws{
+    width: 40px;
+
+    margin: 25px 0;
+
+}
+.logo{
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+  
+  .mode-switch {
+  
+    font-size: 11px;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+  
+    &:hover {
+      color: #50bbf1;
+    }
+  }
+ 
+
+.sls.dark {
+    color: black;
+    background-color: #222; /* Qora rang */
+}
 
 
 
+  .dark {
+    background-color: #f5f5f5;
+    color: #222;
+  }
+  .primary-button {
+      background-color: #222;
+      color: #f5f5f5;
+      
+      .dark & {
+          background-color:rgb(13, 13, 65);
+          color: #f5f5f5; 
+        }
+}
+.sls & {
+    background-color: #222;
+}
